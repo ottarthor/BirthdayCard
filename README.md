@@ -6,6 +6,7 @@ Typescript, React, Tailwind and html2canvas used.
 Clone the repository and then run
 
 npm i
+
 npm start
 
 or visit
