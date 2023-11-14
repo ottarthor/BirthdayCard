@@ -90,7 +90,20 @@ function App() {
         </div>
       )}
       {state === "card" && (
-        <BirthdayCard from={from} to={to} message={message} />
+        <div className="flex flex-col items-center">
+          <BirthdayCard from={from} to={to} message={message} />
+          <button
+            className="bg-pink-100 w-40 rounded-lg mt-4 p-2 "
+            onClick={() => {
+              setState("welcome");
+              setTo("");
+              setFrom("");
+              setMessage("");
+            }}
+          >
+            Make a new card!
+          </button>
+        </div>
       )}
     </div>
   );

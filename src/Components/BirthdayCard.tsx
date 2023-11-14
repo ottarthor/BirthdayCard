@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import html2canvas from "html2canvas";
 
 const BirthdayCard: React.FC<{ from: string; to: string; message: string }> = ({
@@ -7,12 +7,6 @@ const BirthdayCard: React.FC<{ from: string; to: string; message: string }> = ({
   message,
   ...props
 }) => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const handleMouseMove = (e: any) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
-    console.log(mousePosition);
-  };
-
   const componentRef = useRef<HTMLDivElement>(null);
 
   const takeScreenshot = () => {
@@ -32,7 +26,6 @@ const BirthdayCard: React.FC<{ from: string; to: string; message: string }> = ({
       <div
         {...props}
         className="bg-gradient-to-r from-blue-400 to-blue-700 w-[600px] h-96 rounded-lg flex p-4 shadow-lg"
-        onMouseMove={handleMouseMove}
         ref={componentRef}
       >
         <div className="flex flex-col justify-between flex-1 p-2">
