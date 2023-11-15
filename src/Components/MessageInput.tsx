@@ -13,8 +13,7 @@ const MessageInput: React.FC<
         "rounded-lg resize-none placeholder:text-gray-600 outline-none focus:shadow-md p-2 bg-slate-100 shadow-lg",
         className
       )}
-      placeholder="Write your birthday wishes here!"
-      id="message"
+      maxLength={150}
     />
   );
 };

@@ -4,7 +4,7 @@ const WelcomeComponent: React.FC<{}> = () => {
       <h1 className="text-white text-6xl font-black italic pb-4">
         Start making your birthday card!
       </h1>
-      <div>
+      <div className="flex flex-col items-center">
         <p className="text-gray-500 text-lg">Press enter to start</p>
       </div>
     </div>
